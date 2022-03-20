@@ -13,7 +13,7 @@
     
     
       
-        <title>Instalacja - ScalaBook</title>
+        <title>Zmienne - ScalaBook</title>
       
     
     
@@ -59,7 +59,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#strona-pierwsza-scalas" class="md-skip">
+        <a href="#val-vs-var" class="md-skip">
           Przejdź do treści
         </a>
       
@@ -92,7 +92,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Instalacja
+              Zmienne
             
           </span>
         </div>
@@ -160,7 +160,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="./" class="md-tabs__link md-tabs__link--active">
+      <a href="../1_instalacja/" class="md-tabs__link md-tabs__link--active">
         Scala
       </a>
     </li>
@@ -263,21 +263,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        Instalacja
+    <li class="md-nav__item">
+      <a href="../1_instalacja/" class="md-nav__link">
+        Instalacja i polecenia
       </a>
-      
     </li>
   
 
@@ -287,15 +277,19 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2" data-md-state="indeterminate" type="checkbox" id="__nav_1_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2" type="checkbox" id="__nav_1_2" checked>
       
       
       
+        
+          
         
           
         
@@ -319,10 +313,34 @@
               
   
   
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Zmienne
+      </a>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
   
     <li class="md-nav__item">
-      <a href="../page-21/" class="md-nav__link">
-        zmienne
+      <a href="../3_funkcje/" class="md-nav__link">
+        Funkcje
       </a>
     </li>
   
@@ -335,8 +353,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../page-2/" class="md-nav__link">
-        klasy
+      <a href="../4_klasy/" class="md-nav__link">
+        Klasy
       </a>
     </li>
   
@@ -418,7 +436,30 @@
                 
 
 
-<h1 id="strona-pierwsza-scalas">Strona pierwsza scalas</h1>
+<h1 id="val-vs-var">val vs. var</h1>
+<p><code class="highlight"><span class="nc">Val</span></code> to zmienne którym nie można przypisać ponownie wartości (są immutable). Zalecane jest używanie
+wszędzie tam gdzie możliwe zmiennych, których nie można ponownie przypisać innych wartości. Ma to
+szczególne znaczenie w obliczeniach rozproszonych.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">val</label><label for="__tabbed_1_2">var</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">val</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">3</span> <span class="kd">val</span> <span class="n">x</span><span class="p">:</span> <span class="nc">Int</span> <span class="o">=</span> <span class="mi">3</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">x</span> <span class="o">=</span> <span class="mi">4</span> <span class="n">^</span> <span class="n">error</span><span class="p">:</span> <span class="n">reassignment</span> <span class="n">to</span> <span class="kd">val</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">scala</span><span class="o">&gt;</span> <span class="kd">var</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span> <span class="kd">var</span> <span class="n">a</span><span class="p">:</span> <span class="nc">Int</span> <span class="o">=</span> <span class="mi">1</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">scala</span><span class="o">&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">2</span> <span class="c1">// mutated a</span>
+</code></pre></div>
+W zmiennych <code class="highlight"><span class="kd">var</span></code> można zmienić wartość, ale nie można zmienić typu zmiennych, w tym przypadku
+typu Int na inny typ, np. String</p>
+</div>
+</div>
+</div>
+<p>Typ zmiennej jest za jej nazwą - <code class="highlight"><span class="kd">var</span> <span class="n">x</span><span class="p">:</span> <span class="nc">Int</span> <span class="o">=</span> <span class="mi">10</span></code>. Scala wywnioskuje typ jeśli nie zostanie wprost
+podany.
+W nagłówku funkcji musimy podać typy parametrów, ponieważ scala nie ma ich z czego wnioskować, np.
+<code class="highlight"><span class="k">def</span> <span class="nf">suma</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nc">Int</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nc">Int</span><span class="p">)</span> <span class="o">=</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span></code></p>
 
               
             </article>
@@ -431,15 +472,30 @@
   
     <nav class="md-footer__inner md-grid" aria-label="Stopka">
       
+        
+        <a href="../1_instalacja/" class="md-footer__link md-footer__link--prev" aria-label="Poprzednia strona: Instalacja i polecenia" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Poprzednia strona
+              </span>
+              Instalacja i polecenia
+            </div>
+          </div>
+        </a>
+      
       
         
-        <a href="../page-21/" class="md-footer__link md-footer__link--next" aria-label="Następna strona: zmienne" rel="next">
+        <a href="../3_funkcje/" class="md-footer__link md-footer__link--next" aria-label="Następna strona: Funkcje" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Następna strona
               </span>
-              zmienne
+              Funkcje
             </div>
           </div>
           <div class="md-footer__button md-icon">
