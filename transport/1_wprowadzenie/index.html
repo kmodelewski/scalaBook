@@ -59,7 +59,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#apache-kafka" class="md-skip">
+        <a href="#big-data-w-transporcie" class="md-skip">
           Przejdź do treści
         </a>
       
@@ -168,15 +168,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="./" class="md-tabs__link md-tabs__link--active">
+      <a href="../../kafka/1_wprowadzenie/" class="md-tabs__link">
         Kafka
       </a>
     </li>
@@ -198,13 +196,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../transport/1_wprowadzenie/" class="md-tabs__link">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
         Transport - Big Data
       </a>
     </li>
@@ -386,14 +386,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
       
       
       
@@ -418,21 +416,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../kafka/1_wprowadzenie/" class="md-nav__link">
         Wprowadzenie
       </a>
-      
     </li>
   
 
@@ -465,12 +453,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       
       
@@ -495,11 +485,21 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../transport/1_wprowadzenie/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Wprowadzenie
       </a>
+      
     </li>
   
 
@@ -543,18 +543,11 @@
                 
 
 
-<h1 id="apache-kafka">Apache Kafka</h1>
-<p>Apache Kafka to broker danych, który:</p>
-<ol>
-<li>Zapisuje komunikaty na dysku brokera. W przypadku braku odczytu komunikatów nie ma potrzeby powtarzania komunikatów ze strony kafki. Wystarczy po stronie consumera je odczytać.</li>
-<li></li>
-</ol>
-<p>Kafka składa się z: </p>
-<ol>
-<li>Kafka umożliwia zastosowanie kilku narzędzi budowania kodu m.in. sbt, mill i maven. </li>
-<li>Kafka connect umożliwia zastosowanie kilku narzędzi budowania kodu m.in. sbt, mill i maven. </li>
-<li>Kafka streams umożliwia zastosowanie kilku narzędzi budowania kodu m.in. sbt, mill i maven. </li>
-</ol>
+<h1 id="big-data-w-transporcie">BIG DATA w Transporcie</h1>
+<p>BIG DATA
+1. Nifi 
+2. Kafka. 
+3. Spark</p>
 
               
             </article>
@@ -568,7 +561,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Stopka">
       
         
-        <a href="../../scala/4_klasy/" class="md-footer__link md-footer__link--prev" aria-label="Poprzednia strona: Klasy" rel="prev">
+        <a href="../../kafka_streams/kafka_streams/" class="md-footer__link md-footer__link--prev" aria-label="Poprzednia strona: Kafka Streams" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -577,26 +570,11 @@
               <span class="md-footer__direction">
                 Poprzednia strona
               </span>
-              Klasy
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../../kafka_streams/kafka_streams/" class="md-footer__link md-footer__link--next" aria-label="Następna strona: Kafka Streams" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Następna strona
-              </span>
               Kafka Streams
             </div>
           </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
         </a>
+      
       
     </nav>
   
